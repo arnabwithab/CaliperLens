@@ -20,6 +20,6 @@ make tf-apply ENV=pilot  # apply (needs AWS creds + BAA)
 make tf-fmt    # fmt -check
 ```
 
-Remote state (`backend.tf`) is S3 + DynamoDB + KMS — uncomment when account exists. Until then `terraform` runs local state (fine for `validate`/`plan` dry-runs).
+Remote state (`backend.tf`) is S3 + DynamoDB + KMS
 
 Parity seams (§10): same container image, same `LLM_BACKEND=bedrock`/`AUTH_BACKEND=cognito`/`VECTOR_BACKEND=pgvector` flags that local runs with `=local`. `terraform plan` never touches `make dev`.
