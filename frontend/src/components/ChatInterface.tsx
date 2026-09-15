@@ -100,50 +100,71 @@ function ChatInterface() {
   return (
     <div className="flex flex-col h-screen bg-white">
       <header className="sticky top-0 z-[100] bg-gradient-to-r from-white to-rose-50 border-b border-rose-100 shadow-sm">
-        <div className="max-w-[1400px] mx-auto px-8 py-4 flex justify-between items-center gap-12 max-lg:px-6 max-lg:gap-6 max-md:flex-wrap max-md:py-3 max-md:px-4 max-md:gap-3">
-          <div className="flex items-center gap-3 flex-shrink-0">
-            <img
-              src="/caliper_lens.png"
-              alt="CaliperLens"
-              className="w-8 h-8 rounded-md object-cover"
-            />
-            <span className="text-lg font-bold text-slate-900 -tracking-[0.5px]">CaliperLens</span>
+        <div className="w-full px-8 py-4 flex justify-between items-center gap-12 max-lg:px-6 max-lg:gap-6 max-md:flex-wrap max-md:py-3 max-md:px-4 max-md:gap-3">
+          <div className="flex items-center gap-8 flex-1 min-w-0">
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <img
+                src="/caliper_lens.png"
+                alt="CaliperLens"
+                className="w-8 h-8 rounded-md object-cover"
+              />
+              <span className="text-lg font-bold text-slate-900 -tracking-[0.5px]">
+                CaliperLens
+              </span>
+            </div>
+
+            <nav className="flex gap-8 max-lg:gap-6 max-md:order-3 max-md:w-full max-md:justify-center">
+              <a
+                href="#modules"
+                className="text-[15px] text-slate-500 font-medium border border-slate-300 rounded-full px-4 py-2 hover:text-slate-900 hover:bg-slate-50 transition-all no-underline"
+              >
+                Modules
+              </a>
+              <a
+                href="#clients"
+                className="text-[15px] text-slate-500 font-medium border border-slate-300 rounded-full px-4 py-2 hover:text-slate-900 hover:bg-slate-50 transition-all no-underline"
+              >
+                Clients
+              </a>
+              <a
+                href="#about"
+                className="text-[15px] text-slate-500 font-medium border border-slate-300 rounded-full px-4 py-2 hover:text-slate-900 hover:bg-slate-50 transition-all no-underline"
+              >
+                About
+              </a>
+              <a
+                href="#resources"
+                className="text-[15px] text-slate-500 font-medium border border-slate-300 rounded-full px-4 py-2 hover:text-slate-900 hover:bg-slate-50 transition-all no-underline"
+              >
+                Resources
+              </a>
+              <a
+                href="#SQL-Tool"
+                className="text-[15px] font-bold text-blue-600 border border-slate-300 rounded-full px-4 py-2 hover:bg-slate-50 transition-all no-underline"
+              >
+                CaliperLens
+              </a>
+            </nav>
           </div>
 
-          <nav className="flex gap-8 flex-1 max-lg:gap-6 max-md:order-3 max-md:w-full max-md:justify-center">
+          <div className="flex items-center gap-3 flex-shrink-0">
             <a
-              href="#modules"
-              className="text-[15px] text-slate-500 font-medium border border-slate-300 rounded-full px-4 py-2 hover:text-slate-900 hover:bg-slate-50 transition-all no-underline"
+              href="https://github.com/arnabwithab/CaliperLens"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="CaliperLens on GitHub"
+              className="flex items-center justify-center text-slate-500 hover:text-slate-900 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
             >
-              Modules
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z" />
+              </svg>
             </a>
-            <a
-              href="#clients"
-              className="text-[15px] text-slate-500 font-medium border border-slate-300 rounded-full px-4 py-2 hover:text-slate-900 hover:bg-slate-50 transition-all no-underline"
-            >
-              Clients
-            </a>
-            <a
-              href="#about"
-              className="text-[15px] text-slate-500 font-medium border border-slate-300 rounded-full px-4 py-2 hover:text-slate-900 hover:bg-slate-50 transition-all no-underline"
-            >
-              About
-            </a>
-            <a
-              href="#resources"
-              className="text-[15px] text-slate-500 font-medium border border-slate-300 rounded-full px-4 py-2 hover:text-slate-900 hover:bg-slate-50 transition-all no-underline"
-            >
-              Resources
-            </a>
-            <a
-              href="#SQL-Tool"
-              className="text-[15px] font-bold text-blue-600 border border-slate-300 rounded-full px-4 py-2 hover:bg-slate-50 transition-all no-underline"
-            >
-              CaliperLens
-            </a>
-          </nav>
-
-          <div className="flex-shrink-0">
             <button className="flex items-center gap-2 bg-gradient-to-br from-blue-600 to-blue-900 text-white font-semibold text-sm rounded-lg px-5 py-2.5 -tracking-[0.3px] transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/20 active:translate-y-0">
               <span>Book a demo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
