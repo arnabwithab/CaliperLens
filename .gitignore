@@ -29,5 +29,12 @@ build/
 
 graphify-out/
 
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfplan
+
 # OpenCode
 .opencode/node_modules/

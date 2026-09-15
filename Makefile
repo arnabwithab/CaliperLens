@@ -1,4 +1,4 @@
-.PHONY: setup dev test style build clean infra-up infra-down db-load dbt-run eval redteam diagram help
+.PHONY: setup dev test style build clean infra-up infra-down db-load dbt-run eval redteam diagram tf-init tf-plan tf-apply tf-fmt help
 
 ## Install all dependencies (frontend + backend)
 setup:
@@ -67,6 +67,19 @@ redteam:
 ## Generate architecture diagrams (requires graphviz + diagrams)
 diagram:
 	cd backend && uv run python ../docs/diagram.py
+
+## Terraform — AWS prod (§10 local stays compose)
+tf-init:
+	terraform -chdir=terraform init
+
+tf-plan: ## make tf-plan ENV=pilot|prod
+	terraform -chdir=terraform plan -var-file=envs/$(ENV).tfvars
+
+tf-apply: ## make tf-apply ENV=pilot|prod
+	terraform -chdir=terraform apply -var-file=envs/$(ENV).tfvars
+
+tf-fmt:
+	terraform -chdir=terraform fmt -recursive -diff
 
 ## Show this help
 help:
