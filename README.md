@@ -14,7 +14,7 @@
 </p>
 </center>
 
-An agentic natural-language-to-SQL engine for querying complex healthcare datasets autonomously. Uses a multi-agent sandboxed workflow to reason through database schemas and generate complex queries.
+An agentic natural-language-to-SQL engine for querying complex healthcare datasets. Uses a multi-agent sandboxed workflow to reason through database schemas and generate complex queries.
 
 <div align="left">
 
